@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  maintainer-copilot:
+    build:
+      context: .
+      target: runtime
+    image: maintainercopilot/app:latest
+    container_name: maintainer-copilot
+    env_file:
+      - .env
+    ports:
+      - "${PORT:-8000}:8000"
+    volumes:
+      - ./github_private_key.pem:/app/github_private_key.pem:ro
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # Optional: ngrok tunnel for local development
+  # Start with: docker compose --profile dev up
+  ngrok:
+    image: ngrok/ngrok:latest
+    container_name: ngrok-tunnel
+    command: http maintainer-copilot:8000
+    environment:
+      - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN:-}
+    ports:
+      - "4040:4040"
+    depends_on:
+      - maintainer-copilot
+    profiles:
+      - dev

@@ -1,4 +1,5 @@
-# MaintainerCopilot
+# Open-Source-Warden
+
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue)
 ![Docker](https://img.shields.io/badge/Docker-ready-blue)
@@ -9,11 +10,26 @@
 
 ---
 
+## Try It — One Click Install
+
+> **No setup required.** Click the button below, pick your repository, and Open-Source-Warden immediately starts triaging issues, reviewing PRs, and guiding new contributors.
+
+[![Install Open-Source-Warden](https://img.shields.io/badge/%E2%9C%85%20Install%20MaintainerCopilot-GitHub%20App-2ea44f?style=for-the-badge&logo=github)](https://github.com/apps/maintainer-copilot-nvidia/installations/new)
+
+Once installed:
+1. Open a new issue → bot posts an automated triage report within seconds.
+2. Open a pull request → bot posts a structured code review.
+3. Comment `/copilot help` on any issue or PR to see all available commands.
+
+> The hosted service runs on Railway. If the button above is unavailable, see the [self-hosting guide](#quick-start) below.
+
+---
+
 ## The Problem
 
 Small open-source projects, nonprofits, and civic-tech teams are run by a handful of maintainers who wear every hat. Every new issue, every unanswered PR, every first-time contributor who doesn't know where to start — it all lands on the same two or three people. Maintainer burnout is real, and it's killing good projects.
 
-MaintainerCopilot is a GitHub App that installs in one click and becomes your always-on AI co-maintainer. It reads your actual codebase before it responds — no hallucinated file paths, no generic advice.
+Open-Source-Warden is a GitHub App that installs in one click and becomes your always-on AI co-maintainer. It reads your actual codebase before it responds — no hallucinated file paths, no generic advice.
 
 ---
 
@@ -97,7 +113,7 @@ Comment on any issue or PR to trigger features on demand:
 
 ## Why NVIDIA Nemotron-3-Super?
 
-MaintainerCopilot's value comes from grounding every response in the actual repository. This requires a model that can:
+Open-Source-Warden's value comes from grounding every response in the actual repository. This requires a model that can:
 
 1. **Plan a multi-step investigation** — deciding which files to read, which terms to search, in what order
 2. **Call tools reliably in a loop** — the agentic loop runs up to 10 iterations of tool calls before producing a final answer
@@ -164,3 +180,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to set up the dev environment, ru
 ## Contest
 
 This project is submitted under the **Community Impact — Open Source Tooling** track of the **NVIDIA × Collabnix Open-Source Maintainer Copilot Contest**.
+
+---
+
+*Authors: [Vuriti Sai Pranay](https://github.com/V-S-Pranay) · Suryanarayana Reddy*

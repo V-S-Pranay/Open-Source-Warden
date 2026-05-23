@@ -83,8 +83,15 @@ async def run_agent(
                     extra={"feature": feature, "repo": repo},
                 )
             else:
-                tool_result = await execute_tool(tool_name, tool_args, context)
-                tool_call_count += 1
+                try:
+                    tool_result = await execute_tool(tool_name, tool_args, context)
+                    tool_call_count += 1
+                except Exception as exc:
+                    tool_result = f"Tool '{tool_name}' encountered an error: {exc}"
+                    logger.warning(
+                        "Tool %s raised unexpected error: %s", tool_name, exc,
+                        extra={"feature": feature, "repo": repo},
+                    )
 
             messages.append({
                 "role": "tool",

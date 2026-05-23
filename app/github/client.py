@@ -1,5 +1,6 @@
 """GitHub API wrapper providing read operations used by the agent tools."""
 
+import itertools
 import logging
 from typing import Any
 
@@ -45,7 +46,7 @@ class GitHubClient:
         """Search for *query* across the repository's code."""
         try:
             results = self._gh.search_code(f"{query} repo:{repo_full_name}")
-            return [{"path": item.path, "name": item.name} for item in results[:10]]
+            return [{"path": item.path, "name": item.name} for item in itertools.islice(results, 10)]
         except GithubException as exc:
             logger.warning("search_code failed for %s: %s", repo_full_name, exc)
             return []
@@ -57,7 +58,7 @@ class GitHubClient:
             issues = repo.get_issues(state="closed", sort="updated")
             return [
                 {"number": i.number, "title": i.title, "labels": [lb.name for lb in i.labels]}
-                for i in issues[:count]
+                for i in itertools.islice(issues, count)
             ]
         except GithubException as exc:
             logger.warning("get_recent_issues failed for %s: %s", repo_full_name, exc)
@@ -108,7 +109,7 @@ class GitHubClient:
         try:
             repo = self._gh.get_repo(repo_full_name)
             pulls = repo.get_pulls(state="closed", sort="updated", base=repo.default_branch)
-            merged = [p for p in pulls[:50] if p.merged]
+            merged = [p for p in itertools.islice(pulls, 50) if p.merged]
             return [
                 {"number": p.number, "title": p.title, "body": p.body or "", "labels": [lb.name for lb in p.labels]}
                 for p in merged

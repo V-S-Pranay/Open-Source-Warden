@@ -10,9 +10,9 @@ from app.features import pr_review
 @pytest.mark.asyncio
 async def test_pr_review_run_returns_string(pr_opened_payload: dict):
     mock_result = (
-        "## 🔍 MaintainerCopilot PR Review\n\n"
+        "## 🔍 Open-Source-Warden PR Review\n\n"
         "**Summary of changes:** This PR fixes the file upload size validation.\n\n"
-        "---\n*Powered by NVIDIA Nemotron-3-Super via MaintainerCopilot*"
+        "---\n*Powered by NVIDIA Nemotron-3-Super via Open-Source-Warden*"
     )
 
     with (

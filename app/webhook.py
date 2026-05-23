@@ -79,9 +79,9 @@ async def _handle_new_issue(data: dict) -> None:
             repo_full_name,
             issue_number,
             installation_id,
-            "⚠️ MaintainerCopilot encountered an error during triage. "
+            "⚠️ Open-Source-Warden encountered an error during triage. "
             "A maintainer will review this issue manually.\n\n"
-            "---\n*Powered by NVIDIA Nemotron-3-Super via MaintainerCopilot*",
+            "---\n*Powered by NVIDIA Nemotron-3-Super via Open-Source-Warden*",
         )
 
 
@@ -102,9 +102,9 @@ async def _handle_new_pr(data: dict) -> None:
             repo_full_name,
             pr_number,
             installation_id,
-            "⚠️ MaintainerCopilot encountered an error during PR review. "
+            "⚠️ Open-Source-Warden encountered an error during PR review. "
             "A maintainer will review manually.\n\n"
-            "---\n*Powered by NVIDIA Nemotron-3-Super via MaintainerCopilot*",
+            "---\n*Powered by NVIDIA Nemotron-3-Super via Open-Source-Warden*",
         )
 
 
@@ -156,7 +156,7 @@ async def _handle_comment_command(data: dict) -> None:
                 await _post_comment(
                     repo_full_name, issue_number, installation_id,
                     f"Unknown command `{command}`. Type `/copilot help` for a list of commands.\n\n"
-                    "---\n*Powered by NVIDIA Nemotron-3-Super via MaintainerCopilot*",
+                    "---\n*Powered by NVIDIA Nemotron-3-Super via Open-Source-Warden*",
                 )
 
     except Exception as exc:
@@ -165,8 +165,8 @@ async def _handle_comment_command(data: dict) -> None:
             repo_full_name,
             issue_number,
             installation_id,
-            "⚠️ MaintainerCopilot encountered an error processing your command.\n\n"
-            "---\n*Powered by NVIDIA Nemotron-3-Super via MaintainerCopilot*",
+            "⚠️ Open-Source-Warden encountered an error processing your command.\n\n"
+            "---\n*Powered by NVIDIA Nemotron-3-Super via Open-Source-Warden*",
         )
 
 

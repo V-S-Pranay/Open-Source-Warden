@@ -10,8 +10,8 @@ from app.features import triage
 @pytest.mark.asyncio
 async def test_triage_run_returns_string(issue_opened_payload: dict):
     mock_result = (
-        "## 🤖 MaintainerCopilot Triage\n\n**Category:** Bug Report\n\n"
-        "---\n*Powered by NVIDIA Nemotron-3-Super via MaintainerCopilot*"
+        "## 🤖 Open-Source-Warden Triage\n\n**Category:** Bug Report\n\n"
+        "---\n*Powered by NVIDIA Nemotron-3-Super via Open-Source-Warden*"
     )
 
     with (
@@ -26,7 +26,7 @@ async def test_triage_run_returns_string(issue_opened_payload: dict):
         result = await triage.run(issue_opened_payload)
 
     assert isinstance(result, str)
-    assert "MaintainerCopilot Triage" in result
+    assert "Open-Source-Warden Triage" in result
 
 
 @pytest.mark.asyncio

@@ -12,7 +12,7 @@ async def test_onboarding_run_returns_string(issue_opened_payload: dict):
     mock_result = (
         "## 👋 Good First Issue — Contributor Guide\n\n"
         "Hey there, future contributor!\n\n"
-        "---\n*Powered by NVIDIA Nemotron-3-Super via MaintainerCopilot*"
+        "---\n*Powered by NVIDIA Nemotron-3-Super via Open-Source-Warden*"
     )
 
     with (

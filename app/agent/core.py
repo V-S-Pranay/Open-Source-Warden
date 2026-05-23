@@ -53,7 +53,7 @@ async def run_agent(
 
         if not response.choices:
             logger.error("NIM API returned empty choices", extra={"feature": feature, "repo": repo})
-            return "I was unable to complete the analysis (empty model response).\n\n---\n*Powered by NVIDIA Nemotron-3-Super via MaintainerCopilot*"
+            return "I was unable to complete the analysis (empty model response).\n\n---\n*Powered by NVIDIA Nemotron-3-Super via Open-Source-Warden*"
 
         message = response.choices[0].message
 
@@ -102,5 +102,5 @@ async def run_agent(
     return (
         "I was unable to complete the analysis within the allowed steps. "
         "Please try again.\n\n"
-        "---\n*Powered by NVIDIA Nemotron-3-Super via MaintainerCopilot*"
+        "---\n*Powered by NVIDIA Nemotron-3-Super via Open-Source-Warden*"
     )

@@ -11,7 +11,7 @@ from app.features import reproduction
 async def test_reproduction_run_returns_string(issue_opened_payload: dict):
     mock_result = (
         "## 🔬 Reproduction Steps\n\n**Steps to reproduce:**\n1. Step one\n\n"
-        "---\n*Powered by NVIDIA Nemotron-3-Super via MaintainerCopilot*"
+        "---\n*Powered by NVIDIA Nemotron-3-Super via Open-Source-Warden*"
     )
 
     with (

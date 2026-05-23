@@ -51,7 +51,7 @@ def test_root_endpoint(client: TestClient):
     response = client.get("/")
     assert response.status_code == 200
     data = response.json()
-    assert data["name"] == "MaintainerCopilot"
+    assert data["name"] == "Open-Source-Warden"
 
 
 def test_webhook_rejects_unsigned_request(client: TestClient, issue_opened_payload: dict):

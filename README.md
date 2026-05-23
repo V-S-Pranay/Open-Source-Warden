@@ -14,7 +14,7 @@
 
 > **No setup required.** Click the button below, pick your repository, and Open-Source-Warden immediately starts triaging issues, reviewing PRs, and guiding new contributors.
 
-[![Install Open-Source-Warden](https://img.shields.io/badge/%E2%9C%85%20Install%20MaintainerCopilot-GitHub%20App-2ea44f?style=for-the-badge&logo=github)](https://github.com/apps/maintainer-copilot-nvidia/installations/new)
+[![Install Open-Source-Warden](https://img.shields.io/badge/%E2%9C%85%20Install%20Open--Source--Warden-GitHub%20App-2ea44f?style=for-the-badge&logo=github)](https://github.com/apps/maintainer-copilot-nvidia/installations/new)
 
 Once installed:
 1. Open a new issue → bot posts an automated triage report within seconds.
@@ -74,8 +74,8 @@ Triggered by `/copilot release-notes` or a tagged push. Reads merged PRs and dra
 
 ```bash
 # Step 1: Clone the repo
-git clone https://github.com/your-org/maintainer-copilot.git
-cd maintainer-copilot
+git clone https://github.com/V-S-Pranay/Open-Source-Warden.git
+cd Open-Source-Warden
 
 # Step 2: Configure your environment
 cp .env.example .env

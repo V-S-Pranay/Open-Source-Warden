@@ -1,4 +1,4 @@
-"""FastAPI entry point for MaintainerCopilot."""
+"""FastAPI entry point for Open-Source-Warden."""
 
 import logging
 
@@ -12,7 +12,7 @@ setup_logging()
 logger = logging.getLogger(__name__)
 
 app = FastAPI(
-    title="MaintainerCopilot",
+    title="Open-Source-Warden",
     description=(
         "AI-powered GitHub assistant for open-source maintainers, "
         "powered by NVIDIA Llama-3.3-Nemotron-Super-49B"
@@ -33,7 +33,7 @@ async def health() -> dict:
 async def root() -> dict:
     """Root endpoint with app metadata."""
     return {
-        "name": "MaintainerCopilot",
+        "name": "Open-Source-Warden",
         "powered_by": "NVIDIA Nemotron-3-Super",
         "docs": "/docs",
     }

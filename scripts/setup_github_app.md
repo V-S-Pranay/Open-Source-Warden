@@ -1,6 +1,6 @@
 # Setting Up the GitHub App
 
-Follow these steps to register MaintainerCopilot as a GitHub App on your account or organization.
+Follow these steps to register Open-Source-Warden as a GitHub App on your account or organization.
 
 ---
 
@@ -13,7 +13,7 @@ Follow these steps to register MaintainerCopilot as a GitHub App on your account
 
 | Field | Value |
 |---|---|
-| **GitHub App name** | `MaintainerCopilot` (or any unique name) |
+| **GitHub App name** | `Open-Source-Warden` (or any unique name) |
 | **Homepage URL** | Your repo URL or `https://example.com` |
 | **Webhook URL** | Your server URL + `/webhook` (e.g. `https://your-ngrok-url.ngrok.io/webhook`) |
 | **Webhook secret** | A strong random string — copy it to `GITHUB_WEBHOOK_SECRET` in `.env` |
@@ -78,9 +78,9 @@ docker compose --profile dev up
 
 ## Step 6 — Verify
 
-Open an issue on the installed repository. Within a few seconds you should see a triage comment from MaintainerCopilot.
+Open an issue on the installed repository. Within a few seconds you should see a triage comment from Open-Source-Warden.
 
 Check logs with:
 ```bash
-docker compose logs -f maintainer-copilot
+docker compose logs -f open-source-warden
 ```

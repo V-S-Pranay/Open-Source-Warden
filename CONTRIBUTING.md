@@ -1,4 +1,4 @@
-# Contributing to MaintainerCopilot
+# Contributing to Open-Source-Warden
 
 Thank you for your interest in contributing! This guide covers everything you need to get from zero to a merged PR.
 
@@ -16,8 +16,8 @@ Thank you for your interest in contributing! This guide covers everything you ne
 
 ```bash
 # Clone the repo
-git clone https://github.com/your-org/maintainer-copilot.git
-cd maintainer-copilot
+git clone https://github.com/V-S-Pranay/Open-Source-Warden.git
+cd Open-Source-Warden
 
 # Create a virtual environment
 python -m venv venv
@@ -115,4 +115,4 @@ A maintainer will review your PR, run it against a test repository, and merge it
 
 ## Questions?
 
-Open an issue with the `question` label, or drop a comment on an existing issue. MaintainerCopilot itself will help triage it!
+Open an issue with the `question` label, or drop a comment on an existing issue. Open-Source-Warden itself will help triage it!

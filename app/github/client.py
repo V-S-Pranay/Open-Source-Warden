@@ -13,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 
 class GitHubClient:
-    """Thin wrapper around PyGithub for the operations MaintainerCopilot needs."""
+    """Thin wrapper around PyGithub for the operations Open-Source-Warden needs."""
 
     def __init__(self, installation_id: int) -> None:
         self._gh: Github = get_github_client(installation_id)

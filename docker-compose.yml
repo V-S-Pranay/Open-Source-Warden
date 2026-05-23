@@ -1,12 +1,12 @@
 version: "3.9"
 
 services:
-  maintainer-copilot:
+  open-source-warden:
     build:
       context: .
       target: runtime
-    image: maintainercopilot/app:latest
-    container_name: maintainer-copilot
+    image: open-source-warden/app:latest
+    container_name: open-source-warden
     env_file:
       - .env
     ports:
@@ -30,12 +30,12 @@ services:
   ngrok:
     image: ngrok/ngrok:latest
     container_name: ngrok-tunnel
-    command: http maintainer-copilot:8000
+    command: http open-source-warden:8000
     environment:
       - NGROK_AUTHTOKEN=${NGROK_AUTHTOKEN:-}
     ports:
       - "4040:4040"
     depends_on:
-      - maintainer-copilot
+      - open-source-warden
     profiles:
       - dev

@@ -16,6 +16,7 @@ class Settings(BaseSettings):
     # GitHub App credentials
     GITHUB_APP_ID: str = ""
     GITHUB_PRIVATE_KEY_PATH: str = "./github_private_key.pem"
+    GITHUB_PRIVATE_KEY: str = ""  # PEM content as env var (used in cloud deployments)
     GITHUB_WEBHOOK_SECRET: str = ""
 
     # App settings

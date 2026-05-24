@@ -9,7 +9,8 @@ from app.config import settings
 
 
 def _load_private_key() -> str:
-    """Read the GitHub App private key from disk."""
+    if settings.GITHUB_PRIVATE_KEY:
+        return settings.GITHUB_PRIVATE_KEY.replace("\\n", "\n")
     with open(settings.GITHUB_PRIVATE_KEY_PATH, "r") as f:
         return f.read()
 

@@ -19,7 +19,7 @@ Pick your repository, click Install, and the bot starts working immediately — 
 - Open a PR and it reviews every changed file
 - Comment `/copilot help` to see what else it can do
 
-[![Watch installation walkthrough]](https://github.com/user-attachments/assets/3363f22b-7f2f-490d-bf43-08e72ff2740f)
+![Watch installation walkthrough](https://github.com/user-attachments/assets/3363f22b-7f2f-490d-bf43-08e72ff2740f)
 
 > Self-hosting instructions are below if you want to run your own instance.
 

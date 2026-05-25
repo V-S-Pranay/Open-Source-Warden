@@ -49,15 +49,16 @@ See the agent running live: a new GitHub issue triggers the full triage pipeline
 
 Every new issue gets a triage report automatically: severity, category, suggested labels, relevant source files, and recommended next steps. Maintainers can skip the read-and-classify step entirely.
 
-[![Watch Issue Triage demo](https://img.youtube.com/vi/VIDEO_ID_TRIAGE/hqdefault.jpg)](https://youtu.be/VIDEO_ID_TRIAGE)
+![Watch Triage and Reproduction Steps demo](https://youtu.be/MDgrL2pT_kU)
 
 ---
+
 
 ### Reproduction Steps
 
 For bug reports, the agent traces the relevant code path and writes step-by-step reproduction instructions grounded in what the code actually does — not boilerplate advice.
 
-[![Watch Reproduction Steps demo](https://img.youtube.com/vi/VIDEO_ID_REPRO/hqdefault.jpg)](https://youtu.be/VIDEO_ID_REPRO)
+[![Watch Triage and Reproduction Steps demo](https://img.youtube.com/vi/MDgrL2pT_kU/hqdefault.jpg)](https://youtu.be/MDgrL2pT_kU)
 
 ---
 

@@ -36,6 +36,7 @@ Open-Source-Warden plugs into your repo as a GitHub App and handles the first-re
 ## Live Demo — Powered by Railway
 
 See the agent running live: a new GitHub issue triggers the full triage pipeline on a real repository deployed on Railway.
+
 ![Watch backend workings](https://github.com/user-attachments/assets/f1cdd610-9480-4340-ab45-2c3712076d60)
 
 

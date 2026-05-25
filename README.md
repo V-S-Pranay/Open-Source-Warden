@@ -7,8 +7,6 @@
 
 > An AI GitHub App for open-source projects. Triages issues, reviews pull requests, guides new contributors, and drafts release notes — powered by NVIDIA Nemotron-3-Super (49B).
 
-![Open-Source-Warden in action](https://github.com/user-attachments/assets/3363f22b-7f2f-490d-bf43-08e72ff2740f)
-
 ---
 
 ## Install in One Click
@@ -21,7 +19,7 @@ Pick your repository, click Install, and the bot starts working immediately — 
 - Open a PR and it reviews every changed file
 - Comment `/copilot help` to see what else it can do
 
-[![Watch installation walkthrough](https://img.youtube.com/vi/VIDEO_ID_INSTALL/hqdefault.jpg)](https://youtu.be/VIDEO_ID_INSTALL)
+[![Watch installation walkthrough]](https://github.com/user-attachments/assets/3363f22b-7f2f-490d-bf43-08e72ff2740f)
 
 > Self-hosting instructions are below if you want to run your own instance.
 

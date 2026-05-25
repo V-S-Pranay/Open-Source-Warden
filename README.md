@@ -47,16 +47,8 @@ See the agent running live: a new GitHub issue triggers the full triage pipeline
 
 ### Issue Triage
 
-Every new issue gets a triage report automatically: severity, category, suggested labels, relevant source files, and recommended next steps. Maintainers can skip the read-and-classify step entirely.
-
-[![Watch Triage and Reproduction Steps demo](https://img.youtube.com/vi/MDgrL2pT_kU/hqdefault.jpg)](https://youtu.be/MDgrL2pT_kU)
-
----
-
-
-### Reproduction Steps
-
-For bug reports, the agent traces the relevant code path and writes step-by-step reproduction instructions grounded in what the code actually does — not boilerplate advice.
+Every new issue gets a triage report automatically: severity, category, suggested labels, relevant source files, and recommended next steps. Maintainers can skip the read-and-classify step entirely. 
+click the image to play the video
 
 [![Watch Triage and Reproduction Steps demo](https://img.youtube.com/vi/MDgrL2pT_kU/hqdefault.jpg)](https://youtu.be/MDgrL2pT_kU)
 
@@ -65,6 +57,7 @@ For bug reports, the agent traces the relevant code path and writes step-by-step
 ### Newcomer Onboarding
 
 When an issue is tagged `good-first-issue`, the bot posts a contributor guide: where the code lives, how to run it locally, and what a clean fix would look like. New contributors get unblocked without pinging a maintainer.
+click the image to play the video
 
 [![Watch Newcomer Onboarding demo](https://img.youtube.com/vi/-1ckMerA4_0/hqdefault.jpg)](https://youtu.be/-1ckMerA4_0)
 
@@ -73,6 +66,7 @@ When an issue is tagged `good-first-issue`, the bot posts a contributor guide: w
 ### PR Review
 
 Every opened or updated pull request gets a structured review: what changed, potential concerns, things done well, and a merge checklist. The agent reads the actual diff and surrounding context before commenting.
+click the image to play the video
 
 [![Watch PR Review demo](https://img.youtube.com/vi/JdBVGGP7LMs/hqdefault.jpg)](https://youtu.be/JdBVGGP7LMs)
 
@@ -81,12 +75,22 @@ Every opened or updated pull request gets a structured review: what changed, pot
 ### Release Notes
 
 Triggered by `/copilot release-notes` or a version tag push. Reads merged PRs since the last release and drafts categorised release notes ready to publish.
+click the image to play the video
 
 [![Watch Release Notes demo](https://img.youtube.com/vi/4YzMjovSab0/hqdefault.jpg)](https://youtu.be/4YzMjovSab0)
 
 ---
 
+### Reproduction Steps
+
+For bug reports, the agent traces the relevant code path and writes step-by-step reproduction instructions grounded in what the code actually does — not boilerplate advice.
+click the image to play the video
+
+[![Watch Triage and Reproduction Steps demo](https://img.youtube.com/vi/MDgrL2pT_kU/hqdefault.jpg)](https://youtu.be/MDgrL2pT_kU)
+
 ## How it works
+
+---
 
 ```mermaid
 flowchart TD

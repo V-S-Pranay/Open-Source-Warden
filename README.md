@@ -5,7 +5,7 @@
 ![Powered by Nemotron](https://img.shields.io/badge/Powered%20by-NVIDIA%20Nemotron--3--Super-76b900)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
-> An AI co-maintainer for open-source projects. Triages issues, reviews pull requests, guides new contributors, and drafts release notes — powered by NVIDIA Nemotron-3-Super (49B).
+> this is an AI Github app for open-source projects. Triages issues, reviews pull requests, guides new contributors, and drafts release notes — powered by NVIDIA Nemotron-3-Super (49B).
 
 ---
 

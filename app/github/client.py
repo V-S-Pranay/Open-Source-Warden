@@ -133,6 +133,11 @@ class GitHubClient:
 
     def post_comment(self, repo_full_name: str, issue_number: int, body: str) -> None:
         """Post a comment on an issue or pull request."""
+        if not body or not body.strip():
+            logger.error(
+                "post_comment skipped for %s#%d: body is blank", repo_full_name, issue_number
+            )
+            return
         try:
             repo = self._gh.get_repo(repo_full_name)
             issue = repo.get_issue(issue_number)

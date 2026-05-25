@@ -95,17 +95,43 @@ async def run_agent(
                 "---\n*Powered by NVIDIA Nemotron-3-Super via Open-Source-Warden*"
             )
 
-        message = response.choices[0].message
+        choice = response.choices[0]
+        message = choice.message
+
+        if choice.finish_reason == "length" and not message.tool_calls:
+            elapsed = time.monotonic() - start
+            logger.warning(
+                "Model hit max_tokens limit after %.2fs — input diff likely too large",
+                elapsed,
+                extra={"feature": feature, "repo": repo},
+            )
+            return (
+                "The analysis could not be completed — the pull request diff is too large for a single pass. "
+                "Consider splitting the PR into smaller changes.\n\n"
+                "---\n*Powered by NVIDIA Nemotron-3-Super via Open-Source-Warden*"
+            )
 
         if not message.tool_calls:
             elapsed = time.monotonic() - start
+            content = message.content or ""
+            if not content.strip():
+                logger.warning(
+                    "Model returned empty content after %.2fs",
+                    elapsed,
+                    extra={"feature": feature, "repo": repo},
+                )
+                return (
+                    "The analysis could not be completed (the model returned an empty response). "
+                    "Please try again or trigger the command manually.\n\n"
+                    "---\n*Powered by NVIDIA Nemotron-3-Super via Open-Source-Warden*"
+                )
             logger.info(
                 "Agent finished in %.2fs after %d tool calls",
                 elapsed,
                 tool_call_count,
                 extra={"feature": feature, "repo": repo},
             )
-            return message.content or ""
+            return content
 
         messages.append(message)
 

@@ -7,7 +7,7 @@
 
 > An AI GitHub App for open-source projects. Triages issues, reviews pull requests, guides new contributors, and drafts release notes — powered by NVIDIA Nemotron-3-Super (49B).
 
-![Open-Source-Warden in action](<img width="900" height="506" alt="Image" src="https://github.com/user-attachments/assets/3363f22b-7f2f-490d-bf43-08e72ff2740f" />)
+![Open-Source-Warden in action](https://github.com/user-attachments/assets/3363f22b-7f2f-490d-bf43-08e72ff2740f)
 
 ---
 

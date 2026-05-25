@@ -5,7 +5,9 @@
 ![Powered by Nemotron](https://img.shields.io/badge/Powered%20by-NVIDIA%20Nemotron--3--Super-76b900)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
-> this is an AI Github app for open-source projects. Triages issues, reviews pull requests, guides new contributors, and drafts release notes — powered by NVIDIA Nemotron-3-Super (49B).
+> An AI GitHub App for open-source projects. Triages issues, reviews pull requests, guides new contributors, and drafts release notes — powered by NVIDIA Nemotron-3-Super (49B).
+
+![Open-Source-Warden in action](GIF_URL_HERE)
 
 ---
 
@@ -18,6 +20,8 @@ Pick your repository, click Install, and the bot starts working immediately — 
 - Open an issue and it posts a triage report within seconds
 - Open a PR and it reviews every changed file
 - Comment `/copilot help` to see what else it can do
+
+[![Watch installation walkthrough](https://img.youtube.com/vi/VIDEO_ID_INSTALL/hqdefault.jpg)](https://youtu.be/VIDEO_ID_INSTALL)
 
 > Self-hosting instructions are below if you want to run your own instance.
 
@@ -33,20 +37,43 @@ Open-Source-Warden plugs into your repo as a GitHub App and handles the first-re
 
 ## What it does
 
-**Issue Triage**
+### Issue Triage
+
 Every new issue gets a triage report automatically: severity, category, suggested labels, relevant source files, and recommended next steps. Maintainers can skip the read-and-classify step entirely.
 
-**Reproduction Steps**
+[![Watch Issue Triage demo](https://img.youtube.com/vi/VIDEO_ID_TRIAGE/hqdefault.jpg)](https://youtu.be/VIDEO_ID_TRIAGE)
+
+---
+
+### Reproduction Steps
+
 For bug reports, the agent traces the relevant code path and writes step-by-step reproduction instructions grounded in what the code actually does — not boilerplate advice.
 
-**Newcomer Onboarding**
+[![Watch Reproduction Steps demo](https://img.youtube.com/vi/VIDEO_ID_REPRO/hqdefault.jpg)](https://youtu.be/VIDEO_ID_REPRO)
+
+---
+
+### Newcomer Onboarding
+
 When an issue is tagged `good-first-issue`, the bot posts a contributor guide: where the code lives, how to run it locally, and what a clean fix would look like. New contributors get unblocked without pinging a maintainer.
 
-**PR Review**
+[![Watch Newcomer Onboarding demo](https://img.youtube.com/vi/VIDEO_ID_ONBOARD/hqdefault.jpg)](https://youtu.be/VIDEO_ID_ONBOARD)
+
+---
+
+### PR Review
+
 Every opened or updated pull request gets a structured review: what changed, potential concerns, things done well, and a merge checklist. The agent reads the actual diff and surrounding context before commenting.
 
-**Release Notes**
+[![Watch PR Review demo](https://img.youtube.com/vi/VIDEO_ID_REVIEW/hqdefault.jpg)](https://youtu.be/VIDEO_ID_REVIEW)
+
+---
+
+### Release Notes
+
 Triggered by `/copilot release-notes` or a version tag push. Reads merged PRs since the last release and drafts categorised release notes ready to publish.
+
+[![Watch Release Notes demo](https://img.youtube.com/vi/VIDEO_ID_RELEASE/hqdefault.jpg)](https://youtu.be/VIDEO_ID_RELEASE)
 
 ---
 
